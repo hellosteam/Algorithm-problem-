@@ -2,12 +2,12 @@
 using namespace std;
 #include<algorithm>
 #include<cstring>
-int p[26];
+int p[26];//用来储存定义一个新序列
 int main()
 {
 	string str;
 	cin >> str;
-	for (int i = 0; i < 26; i++)
+	for (int i = 0; i < 26; i++)//输入序列
 	{
 		p[str[i] - 'a'] = i;
 	}
