@@ -1,0 +1,24 @@
+#include<iostream>
+using namespace std;
+#include<algorithm>
+#include<cstring>
+int p[26];
+int main()
+{
+	string str;
+	cin >> str;
+	for (int i = 0; i < 26; i++)
+	{
+		p[str[i] - 'a'] = i;
+	}
+	int res = 1;
+	cin >> str;
+	for (int i = 1; i < str.size(); i++)
+	{
+		if (p[str[i-1] - 'a'] >= p[str[i] - 'a'])
+		{
+			res++;
+		}
+	}
+	return 0;
+}
